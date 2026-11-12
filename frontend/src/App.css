@@ -1,0 +1,323 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #faf9f5;
+  color: #303b32;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background: white;
+}
+
+.navbar h2 {
+  color: #365c46;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #365c46;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 430px;
+  background: linear-gradient(120deg, #e4eee3, #f6e9da);
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-content span {
+  color: #52765a;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #52765a;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.animals {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.animals h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.animals > p {
+  color: #777;
+  margin-bottom: 35px;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.animal-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #00000012;
+  text-align: left;
+}
+
+.animal-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.animal-info {
+  padding: 22px;
+}
+
+.animal-info span {
+  color: #52765a;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.animal-info h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.animal-info p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.animal-info button {
+  background: #52765a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+footer {
+  background: #365c46;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+/* Navigaatio */
+
+.logo {
+  color: #365c46;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Eläinkortin painike */
+
+.card-button {
+  display: inline-block;
+  background: #52765a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.card-button:hover {
+  background: #365c46;
+}
+
+/* Eläimen tietosivu */
+
+.detail-page {
+  padding: 45px 8%;
+}
+
+.back-button {
+  padding: 12px 20px;
+  background: #52765a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.detail-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.detail-content > img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.detail-info h1 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.detail-info h2 {
+  margin: 30px 0 20px;
+}
+
+.detail-info p {
+  line-height: 1.8;
+  margin: 12px 0;
+}
+
+/* Adoptiohakemus */
+
+.detail-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detail-info input,
+.detail-info textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.detail-info textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.detail-info form button {
+  padding: 15px;
+  background: #52765a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Kiitossivu */
+
+.thankyou-page {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: #dcebdc;
+  color: #365c46;
+  font-size: 40px;
+  display: grid;
+  place-items: center;
+}
+
+.thankyou-page h1 {
+  margin-bottom: 20px;
+}
+
+.thankyou-page p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.application-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-info h1 {
+    font-size: 32px;
+  }
+}
