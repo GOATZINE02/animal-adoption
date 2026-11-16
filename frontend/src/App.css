@@ -10,86 +10,293 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #faf9f5;
-  color: #303b32;
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  background: #fff9f8;
+  color: #62545b;
 }
 
+button {
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+/* NAVBAR */
+
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 8%;
-  background: white;
+  padding: 20px 8%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #f4e8eb;
+  box-shadow: 0 3px 15px rgba(100, 60, 75, 0.04);
+}
+
+.logo {
+  color: #c77f98;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.8px;
 }
 
 .navbar h2 {
-  color: #365c46;
+  color: #c77f98;
+  font-size: 23px;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 32px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #365c46;
-  font-weight: bold;
+  color: #62545b;
+  font-weight: 700;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
+
+.nav-links a:hover {
+  color: #d18ca4;
+}
+
+/* HERO */
 
 .hero {
   min-height: 430px;
-  background: linear-gradient(120deg, #e4eee3, #f6e9da);
+  background: linear-gradient(120deg, #f9e5ed, #fff3f5);
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 70px 10%;
 }
 
 .hero-content {
   max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content span {
-  color: #52765a;
-  font-weight: bold;
-  letter-spacing: 2px;
+  display: inline-block;
+  color: #bd7891;
+  background: #ffffff;
+  padding: 8px 17px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin: 20px 0;
+  color: #393238;
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 15px 0 20px;
+  font-weight: 900;
 }
 
 .hero p {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #76666e;
   margin-bottom: 30px;
+  max-width: 540px;
 }
 
-.hero-button {
+/* BUTTONS */
+
+.hero-button,
+.card-button {
   display: inline-block;
-  padding: 15px 25px;
-  background: #52765a;
+  padding: 14px 26px;
+  background: #d99bae;
   color: white;
-  border-radius: 8px;
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(217, 155, 174, 0.2);
+  transition: all 0.25s ease;
 }
+
+.hero-button:hover,
+.card-button:hover {
+  background: #c77f98;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(199, 127, 152, 0.25);
+}
+
+/* ANIMALS */
 
 .animals {
-  padding: 70px 8%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 85px 8%;
   text-align: center;
+  background: #fff9f8;
 }
 
 .animals h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: 34px;
+  color: #393238;
+  margin-bottom: 12px;
+  font-weight: 900;
 }
 
 .animals > p {
-  color: #777;
-  margin-bottom: 35px;
+  color: #897a81;
+  margin-bottom: 40px;
+  font-size: 16px;
 }
+
+/* PINK SOAP BUBBLES */
+
+.bubble {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 30% 25%,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 220, 232, 0.75) 35%,
+    rgba(217, 155, 175, 0.35) 70%,
+    rgba(255, 255, 255, 0.15)
+  );
+  border: 1px solid rgba(217, 155, 175, 0.45);
+  box-shadow:
+    inset -5px -5px 12px rgba(217, 155, 175, 0.15),
+    0 5px 18px rgba(217, 155, 175, 0.15);
+  animation: bubbleFloat 6s ease-in-out infinite alternate;
+}
+
+.bubble-one {
+  width: 90px;
+  height: 90px;
+  top: 100px;
+  left: 3%;
+}
+
+.bubble-two {
+  width: 45px;
+  height: 45px;
+  top: 300px;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.bubble-three {
+  width: 65px;
+  height: 65px;
+  bottom: 100px;
+  left: 8%;
+  animation-delay: 2s;
+}
+
+.bubble-four {
+  width: 30px;
+  height: 30px;
+  bottom: 200px;
+  right: 12%;
+  animation-delay: 0.5s;
+}
+
+.bubble-five {
+  width: 55px;
+  height: 55px;
+  top: 180px;
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+.bubble-six {
+  width: 25px;
+  height: 25px;
+  top: 70px;
+  right: 28%;
+  animation-delay: 2s;
+}
+
+.bubble-seven {
+  width: 80px;
+  height: 80px;
+  bottom: 50px;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.bubble-eight {
+  width: 38px;
+  height: 38px;
+  top: 450px;
+  left: 18%;
+  animation-delay: 2.5s;
+}
+
+.bubble-nine {
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  right: 8%;
+  animation-delay: 0.8s;
+}
+
+.bubble-ten {
+  width: 22px;
+  height: 22px;
+  bottom: 120px;
+  right: 40%;
+  animation-delay: 1.8s;
+}
+
+.bubble-eleven {
+  width: 60px;
+  height: 60px;
+  top: 380px;
+  right: 18%;
+  animation-delay: 2.2s;
+}
+
+.bubble-twelve {
+  width: 35px;
+  height: 35px;
+  bottom: 280px;
+  left: 35%;
+  animation-delay: 0.7s;
+}
+
+@keyframes bubbleFloat {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-18px);
+  }
+}
+
+/* KEEP CONTENT ABOVE BUBBLES */
+
+.animals > h2,
+.animals > p,
+.animals > .animal-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* ANIMAL CARDS */
 
 .animal-grid {
   display: grid;
@@ -99,118 +306,107 @@ body {
 }
 
 .animal-card {
-  background: white;
-  border-radius: 15px;
+  background: #ffffff;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 5px 20px #00000012;
+  box-shadow: 0 8px 28px rgba(110, 70, 85, 0.08);
   text-align: left;
+  border: 1px solid #f6e9ed;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(110, 70, 85, 0.13);
 }
 
 .animal-card img {
   width: 100%;
-  height: 230px;
+  height: 240px;
   object-fit: cover;
+  display: block;
 }
 
 .animal-info {
-  padding: 22px;
+  padding: 24px;
 }
 
 .animal-info span {
-  color: #52765a;
+  display: inline-block;
+  color: #bd7891;
+  background: #fbeaf0;
+  padding: 5px 12px;
+  border-radius: 20px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .animal-info h3 {
-  font-size: 24px;
-  margin: 10px 0;
+  font-size: 23px;
+  color: #393238;
+  margin: 13px 0 9px;
+  font-weight: 900;
 }
 
 .animal-info p {
-  color: #777;
+  color: #897a81;
+  font-size: 14px;
   margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 .animal-info button {
-  background: #52765a;
+  background: #d99bae;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 7px;
+  padding: 12px 22px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: 800;
+  transition: all 0.25s ease;
 }
 
+.animal-info button:hover {
+  background: #c77f98;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
 footer {
-  background: #365c46;
-  color: white;
+  background: #393238;
+  color: #fff5f7;
   text-align: center;
-  padding: 35px;
+  padding: 40px 20px;
+  margin-top: auto;
 }
 
 footer p {
   margin-top: 10px;
+  color: #ead8de;
+  font-size: 14px;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-}
-/* Navigaatio */
-
-.logo {
-  color: #365c46;
-  text-decoration: none;
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-/* Eläinkortin painike */
-
-.card-button {
-  display: inline-block;
-  background: #52765a;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.card-button:hover {
-  background: #365c46;
-}
-
-/* Eläimen tietosivu */
+/* ANIMAL DETAILS */
 
 .detail-page {
-  padding: 45px 8%;
+  padding: 50px 8%;
 }
 
 .back-button {
-  padding: 12px 20px;
-  background: #52765a;
-  color: white;
+  padding: 12px 23px;
+  background: #f6e2e9;
+  color: #a9617c;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
   margin-bottom: 30px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #edcfda;
 }
 
 .detail-content {
@@ -224,25 +420,37 @@ footer p {
 
 .detail-content > img {
   width: 100%;
-  border-radius: 15px;
+  min-height: 350px;
+  max-height: 550px;
+  border-radius: 24px;
   object-fit: cover;
+  box-shadow: 0 8px 28px rgba(110, 70, 85, 0.1);
+}
+
+.detail-info {
+  background: white;
+  border: 1px solid #f4e8eb;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 8px 28px rgba(110, 70, 85, 0.06);
 }
 
 .detail-info h1 {
   font-size: 40px;
+  color: #393238;
   margin: 12px 0;
 }
 
 .detail-info h2 {
+  color: #393238;
   margin: 30px 0 20px;
 }
 
 .detail-info p {
   line-height: 1.8;
   margin: 12px 0;
+  color: #76666e;
 }
-
-/* Adoptiohakemus */
 
 .detail-info form {
   display: flex;
@@ -253,11 +461,26 @@ footer p {
 .detail-info input,
 .detail-info textarea {
   width: 100%;
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid #eadde2;
+  border-radius: 12px;
   font-size: 15px;
   font-family: inherit;
+  color: #393238;
+  background: #fffcfc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail-info input:focus,
+.detail-info textarea:focus {
+  outline: none;
+  border-color: #d99bae;
+  box-shadow: 0 0 0 3px rgba(217, 155, 174, 0.15);
+}
+
+.detail-info input::placeholder,
+.detail-info textarea::placeholder {
+  color: #aa9ba2;
 }
 
 .detail-info textarea {
@@ -267,57 +490,205 @@ footer p {
 
 .detail-info form button {
   padding: 15px;
-  background: #52765a;
+  background: #d99bae;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  transition: all 0.25s ease;
 }
 
-/* Kiitossivu */
+.detail-info form button:hover {
+  background: #c77f98;
+  transform: translateY(-2px);
+}
+
+/* THANK YOU PAGE */
 
 .thankyou-page {
   max-width: 650px;
   margin: 80px auto;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
+  background: white;
+  border: 1px solid #f4e8eb;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(110, 70, 85, 0.07);
 }
 
 .success-icon {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 25px;
   border-radius: 50%;
-  background: #dcebdc;
-  color: #365c46;
+  background: #fbeaf0;
+  color: #c77f98;
   font-size: 40px;
   display: grid;
   place-items: center;
 }
 
 .thankyou-page h1 {
+  color: #393238;
   margin-bottom: 20px;
 }
 
 .thankyou-page p {
   line-height: 1.8;
   margin-bottom: 20px;
+  color: #76666e;
 }
 
 .application-summary {
-  background: white;
-  border-radius: 12px;
+  background: #fff7f8;
+  border: 1px solid #f4e8eb;
+  border-radius: 16px;
   padding: 25px;
   margin: 30px 0;
   text-align: left;
 }
 
+/* MOBILE */
+
 @media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    min-height: 380px;
+    padding: 55px 7%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .animals {
+    padding: 55px 6%;
+  }
+
+  .animals h2 {
+    font-size: 28px;
+  }
+
+  .animal-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .animal-card {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+
   .detail-content {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .detail-info {
+    padding: 22px;
   }
 
   .detail-info h1 {
     font-size: 32px;
   }
+
+  .detail-page {
+    padding: 30px 5%;
+  }
+
+  .thankyou-page {
+    margin: 40px 5%;
+    padding: 25px;
+  }
 }
+/* ANIMAL DETAIL PAGE BUBBLES */
+
+.detail-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.detail-bubble {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 30% 25%,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 220, 232, 0.75) 40%,
+    rgba(217, 155, 175, 0.25) 75%
+  );
+  border: 1px solid rgba(217, 155, 175, 0.4);
+  box-shadow:
+    inset -4px -4px 10px rgba(217, 155, 175, 0.12),
+    0 5px 16px rgba(217, 155, 175, 0.12);
+  animation: bubbleFloat 6s ease-in-out infinite alternate;
+}
+
+.detail-bubble-one {
+  width: 75px;
+  height: 75px;
+  top: 100px;
+  left: 3%;
+}
+
+.detail-bubble-two {
+  width: 40px;
+  height: 40px;
+  top: 350px;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.detail-bubble-three {
+  width: 55px;
+  height: 55px;
+  bottom: 100px;
+  left: 8%;
+  animation-delay: 2s;
+}
+
+.detail-bubble-four {
+  width: 30px;
+  height: 30px;
+  bottom: 180px;
+  right: 12%;
+  animation-delay: 0.5s;
+}
+
+.detail-bubble-five {
+  width: 45px;
+  height: 45px;
+  top: 200px;
+  right: 25%;
+  animation-delay: 1.5s;
+}
+
+.detail-bubble-six {
+  width: 25px;
+  height: 25px;
+  bottom: 300px;
+  left: 30%;
+  animation-delay: 2s;
+}
+
+
