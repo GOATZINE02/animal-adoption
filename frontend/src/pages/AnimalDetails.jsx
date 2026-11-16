@@ -120,7 +120,7 @@ export default function AnimalDetails() {
             />
 
             <button type="submit">
-              Adoptoi minut ❤️
+              Adoptoi minut 
             </button>
           </form>
         </div>

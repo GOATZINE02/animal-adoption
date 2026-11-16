@@ -20,7 +20,7 @@ button {
   transition: all 0.25s ease;
 }
 
-/* NAVBAR */
+
 
 .navbar {
   position: sticky;
@@ -66,7 +66,6 @@ button {
   color: #d18ca4;
 }
 
-/* HERO */
 
 .hero {
   min-height: 430px;
@@ -114,7 +113,7 @@ button {
   max-width: 540px;
 }
 
-/* BUTTONS */
+
 
 .hero-button,
 .card-button {
@@ -138,7 +137,7 @@ button {
   box-shadow: 0 8px 18px rgba(199, 127, 152, 0.25);
 }
 
-/* ANIMALS */
+
 
 .animals {
   position: relative;
@@ -162,7 +161,7 @@ button {
   font-size: 16px;
 }
 
-/* PINK SOAP BUBBLES */
+
 
 .bubble {
   position: absolute;
@@ -287,7 +286,7 @@ button {
   }
 }
 
-/* KEEP CONTENT ABOVE BUBBLES */
+
 
 .animals > h2,
 .animals > p,
@@ -296,7 +295,7 @@ button {
   z-index: 1;
 }
 
-/* ANIMAL CARDS */
+
 
 .animal-grid {
   display: grid;
@@ -371,7 +370,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* FOOTER */
+
 
 footer {
   background: #393238;
@@ -387,7 +386,7 @@ footer p {
   font-size: 14px;
 }
 
-/* ANIMAL DETAILS */
+
 
 .detail-page {
   padding: 50px 8%;
@@ -505,7 +504,7 @@ footer p {
   transform: translateY(-2px);
 }
 
-/* THANK YOU PAGE */
+
 
 .thankyou-page {
   max-width: 650px;
@@ -550,7 +549,7 @@ footer p {
   text-align: left;
 }
 
-/* MOBILE */
+
 
 @media (max-width: 700px) {
   .navbar {
@@ -618,7 +617,7 @@ footer p {
     padding: 25px;
   }
 }
-/* ANIMAL DETAIL PAGE BUBBLES */
+
 
 .detail-page {
   position: relative;
