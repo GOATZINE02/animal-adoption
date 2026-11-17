@@ -7,7 +7,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <span>VAASAN ELÄINSUOJA RY</span>
-          <h1>Löydä uusi paras ystäväsi ❤️</h1>
+          <h1>Löydä uusi paras ystäväsi ️</h1>
           <p>
             Jokainen eläin ansaitsee rakastavan kodin.
             Tutustu adoptiota odottaviin eläimiimme.
