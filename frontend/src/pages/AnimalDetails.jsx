@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { animals } from "../animals";
@@ -46,6 +47,15 @@ export default function AnimalDetails() {
 
   return (
     <main className="detail-page">
+
+      {/* PINK SOAP BUBBLES */}
+      <div className="detail-bubble detail-bubble-one"></div>
+      <div className="detail-bubble detail-bubble-two"></div>
+      <div className="detail-bubble detail-bubble-three"></div>
+      <div className="detail-bubble detail-bubble-four"></div>
+      <div className="detail-bubble detail-bubble-five"></div>
+      <div className="detail-bubble detail-bubble-six"></div>
+
       <button
         className="back-button"
         onClick={() => navigate("/")}
